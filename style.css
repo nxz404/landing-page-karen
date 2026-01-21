@@ -3,6 +3,10 @@
     margin: 0;
     font-family: "Inter";
 }
+html, body {
+    overflow-x: hidden;
+    position: relative;
+}
 h1, span{
     font-family: "Playfair Display";
     font-style: italic;
@@ -395,3 +399,4 @@ details[open] summary i {
         transform: scale(1.2);
     }
 }
+
