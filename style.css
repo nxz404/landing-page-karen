@@ -1,0 +1,397 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter";
+}
+h1, span{
+    font-family: "Playfair Display";
+    font-style: italic;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:active{
+    color: white;
+}
+.container_header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  
+  /* Defina o que é fixo aqui uma única vez */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  /* Animação */
+  animation: slide 40s infinite alternate ease-in-out;
+}
+
+@keyframes slide {
+  0%, 25% { background-image: url('assets/infos/banner1.webp');}
+  26%, 55% { background-image: url('assets/infos/banner3.webp'); }
+  56%, 100% { background-image: url('assets/infos/banner2.webp'); }
+}
+#infos{
+    margin-top: 10vh;
+    margin-left: 30vh;
+}
+#infos h1{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 100;
+    line-height: 40px;
+    font-size: 40px;
+}
+#infos p{
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+#infos button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    width: 150px;
+    height: auto;
+    font-size: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    animation: cor_botao 40s infinite alternate ease-in-out;
+}
+@keyframes cor_botao {
+  0%, 25% { background-color: #c95454;}
+  26%, 55% { background-color: #204950; }
+  56%, 100% { background-color: #205020; }
+}
+
+
+.container_services{
+    background-color: #030302;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+#services_img{
+    display: flex;
+    margin-top: 15vh;
+    margin-right: 5vh;
+    flex-shrink: 0; /* Impede que o container da imagem mude de tamanho */
+    align-self: flex-start;
+}
+#services_img img{
+    position: static;
+}
+#services{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20vh;
+    margin-bottom: 30vh;
+}
+#services h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    margin-bottom: 10px;
+    margin-right: auto;
+    font-style: normal;
+}
+#services summary{
+    animation: summary_cor 40s infinite alternate ease-in-out;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 350px;
+    text-align: start;
+    font-size: 14px;
+}
+@keyframes summary_cor {
+  0%, 25% { background-color: #c95454;}
+  26%, 55% { background-color: #204950; }
+  56%, 100% { background-color: #205020; }
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary i {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+details[open] summary i {
+    transform: rotate(90deg);
+}
+#services p{
+    background-color: #030302;
+    border-top: none;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 350px;
+    text-align: start;
+    font-size: 14px;
+}
+#services summary:hover {
+    background-color: #b04646; /* Um tom levemente mais escuro */
+    transition: 0.2s;
+}
+.container_about_me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    animation: cor_me 40s infinite alternate ease-in-out;
+    color: white;
+}
+@keyframes cor_me {
+  0%, 25% { background-color: #c95454;}
+  26%, 55% { background-color: #204950; }
+  56%, 100% { background-color: #205020; }
+}
+#about_txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+#about_txt h1{
+    font-weight: 400;
+    margin-left: 30vh;
+    margin-right: auto;
+    font-size: 50px;
+}
+#about_txt p{
+    width: 45%;
+    font-weight: 300;
+    margin-left: 30vh;
+    margin-right: auto;
+    font-size: 12px;    
+}
+#about_img{
+    margin-bottom: 10vh;
+    margin-right: 45vh;
+    margin-top: 10vh;
+}
+#about_img img{
+    width:auto;
+    height:600px;
+}
+.container_cta{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#cta_txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center;
+    width: 100%;
+}
+#cta_txt h1{
+    font-style: normal;
+    color: #230f0f;
+    font-size: 32px;
+    font-weight: 600;
+}
+#span_agenda{
+    font-style: italic;
+    font-size: 35px;
+    font-weight: 300;
+    color: #230f0f;
+}
+#cta_txt p, #cta_txt h1, #span_agenda{
+    animation: cor_cta 40s infinite alternate ease-in-out;
+}
+@keyframes cor_cta {
+  0%, 25% { color: #230f0f;}
+  26%, 55% { color: #0f1923; }
+  56%, 100% { color: #0f2312; }
+}
+#cta_txt p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+#cta_txt input{
+    outline: none;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    border-color: 1px solid #230f0f;
+    color: #230f0f;
+}
+#cta_txt input, #cta_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5px;
+}
+#about_txt img{
+    display: none;
+}
+#cta_button{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    padding: 5px;
+    height: 40px;
+    width: 315px;
+    cursor: pointer;
+    color: white;
+    animation: cor_botao 40s infinite alternate ease-in-out;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+#cta_button i{
+    animation: setinha 1s infinite alternate;
+}
+#cta_button::after{
+    margin-right: 100px;
+}
+#return{
+    margin-top: 10px;
+    font-size: 12px;
+}
+@keyframes setinha{
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(2px);}
+}
+@media (max-width: 425px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .container_header{
+        height: 100vh;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #infos{
+        margin: 0;
+        
+    }
+    #infos h1{
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container_services{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    .container_services img{
+        display: none;
+    }
+    #services{
+        margin-top: 10vh;
+        display: flex;
+        gap: 1px;
+
+    }
+    #services h1{
+        margin-left: auto;
+    }
+    summary{
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        transform: scale(0.8);
+    }
+    #services p{
+        border-top: 1px solid white;
+        transform: scale(0.8);
+    }
+    .container_about_me{
+        height: 140vh;
+    }
+    #about_img{
+        display: none;
+    }
+    #about_txt{
+        margin: 0;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        display: flex;
+        justify-items: space-between;
+        gap: 15px;
+        
+    }
+    #about_txt h1, #about_txt p{
+        margin: 0;
+    }
+    #about_txt p{
+        width: 75%;
+    }
+    #about_txt h1{
+        font-size: 32px;
+    }
+    #about_txt img{
+        display: flex;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+    }
+    #about_txt img, #about_txt h1{
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .container_cta{
+        height: 90vh;
+    }
+    #cta_txt{
+        transform: scale(0.71);
+        width: 100vh;
+    }
+    #cta_txt h1, #span_agenda{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #cta_txt button, #cta_txt input{
+        transform: scale(1.2);
+    }
+}
